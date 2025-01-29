@@ -12,6 +12,9 @@ class Task:
         self.title = title.strip().capitalize()
         self.is_completed = is_completed
 
+    def __str__(self):
+        return self.title
+
     def change_completion_status(self, status: bool):
         self.is_completed = status
         logging.info("Marked as completed")
